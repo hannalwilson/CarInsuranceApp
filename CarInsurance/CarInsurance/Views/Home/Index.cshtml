@@ -1,0 +1,61 @@
+﻿<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Get your car insurance quote today!</h5>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("GetQuote", "Home", FormMethod.Post))
+            {
+                <div class="row no-gutters">
+                    <div class="form-group col-md-12">
+                        <label>First Name:</label>
+                        <input name="FirstName" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label>Last Name:</label>
+                        <input name="LastName" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label>Email Address:</label>
+                        <input name="EmailAddress" type="email" class="form-control" />
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label>Date of Birth:</label>
+                        <input name="DateOfBirth" type="date" class="form-control" />
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label>Car Year:</label>
+                        <input name="CarYear" type="number" class="form-control" />
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label>Car Make:</label>
+                        <input name="CarMake" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label>Car Model:</label>
+                        <input name="CarModel" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label>Have you ever had a DUI?</label><br />
+                        <input type="radio" name="HasDUI" id="yes" value="true">
+                        <label for="yes">Yes</label><br />
+                        <input type="radio" name="HasDUI" id="no" value="false">
+                        <label for="no">No</label>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label>How many speeding tickets have you had?</label>
+                        <input name="SpeedingTickets" type="number" class="form-control" />
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label>Do you want full coverage or liability?</label><br />
+                        <input type="radio" name="WantsCoverage" id="yes" value="true">
+                        <label for="yes">Yes</label><br />
+                        <input type="radio" name="WantsCoverage" id="no" value="false">
+                        <label for="no">No</label>
+                    </div>
+                    <button type="submit" class="btn btn-block btn-primary">Submit</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>

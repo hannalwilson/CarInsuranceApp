@@ -1,0 +1,31 @@
+﻿@using CarInsurance.ViewModels
+@model List<QuoteVm>
+
+<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Customer Quotes</h5>
+        </div>
+        <div class="card-body">
+            @foreach (var quote in Model)
+            {
+                <div class="row mb-3">
+                    <div class="col-2">
+                        @quote.FirstName
+                    </div>
+                    <div class="col-2">
+                        @quote.LastName
+                    </div>
+                    <div class="col-5">
+                        @quote.EmailAddress
+                    </div>
+                    <div class="col">
+                        @quote.InsuranceQuote
+                    </div>
+                </div>
+
+            }
+
+        </div>
+    </div>
+</div>
